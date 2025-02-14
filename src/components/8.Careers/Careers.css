@@ -1,0 +1,116 @@
+.careers {
+  background: #f1f1f1;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.careers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f1f1f1;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.careers-info {
+  text-align: left;
+  flex: 1;
+}
+
+.careers-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+.careers-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.job-details {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.job-details p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.job-details .icon {
+  color: #2e8b57;
+  margin-right: 10px;
+}
+
+/* Apply Button */
+.apply-button {
+  display: inline-block;
+  background: #2e8b57;
+  color: white;
+  padding: 14px 28px;
+  margin-top: 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+}
+
+.apply-button:hover {
+  background: #246b45;
+  transform: scale(1.05);
+}
+
+/* Right Section: Image */
+.careers-image {
+  flex: 1;
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.careers-image img {
+  width: 100%; /* Full width */
+  max-height: 400px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image fills without distortion */
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .careers-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .careers-info {
+    text-align: center;
+  }
+
+  .job-details p {
+    justify-content: center;
+  }
+
+  .careers-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .careers-image img {
+    max-width: 80%;
+  }
+}

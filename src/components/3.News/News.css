@@ -1,0 +1,111 @@
+.news {
+  background-color: #f9f9f9;
+  padding: 20px 10px;
+}
+
+.news-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* News Section Title */
+.news-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #9b1c31;
+  margin-bottom: 10px;
+}
+
+/* News List Layout */
+.news-list {
+  border-top: 2px solid #ccc;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0px 0;
+}
+
+/* Date */
+.news-date {
+  font-size: 1rem;
+  color: #555;
+  width: 100px;
+  text-align: right;
+  margin-right: 15px;
+}
+
+/* Category Label */
+.news-category {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+/* Category Colors */
+.プレスリリース {
+  background-color: #9b1c31;
+}
+
+.お知らせ・イベント {
+  background-color: #246b45;
+}
+
+/* News Details */
+.news-details {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust gap as needed */
+  flex-grow: 1;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+}
+
+.news-summary {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* View More Button */
+.news-more {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.news-more-link {
+  font-size: 1rem;
+  color: #9b1c31;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-date {
+    width: auto;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .news-category {
+    margin-bottom: 5px;
+  }
+}

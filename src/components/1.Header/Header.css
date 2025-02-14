@@ -1,0 +1,117 @@
+/* Base Header Styling */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 20px; /* Adjusted padding for better fit on mobile */
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header When Scrolled */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Centered Navigation Menu */
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.nav-links a:hover {
+  color: #246b45;
+}
+
+.nav-links a:focus {
+  outline: 2px solid #246b45;
+  outline-offset: 2px;
+}
+
+/* Dropdown Menu */
+.nav-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .header {
+    padding: 10px 10px; /* Further adjusted padding for mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 30px; /* Adjusted margin to fit within the screen */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .header-right {
+    display: none; /* Hide the right section on mobile */
+  }
+}

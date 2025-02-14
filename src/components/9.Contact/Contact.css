@@ -1,0 +1,102 @@
+.contact {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Container for Form and Info */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Contact Form */
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Modern Shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Slight hover effect */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2e8b57;
+  box-shadow: 0px 0px 10px rgba(46, 139, 87, 0.3);
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submit-button {
+  background: linear-gradient(to right, #2e8b57, #246b45);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #246b45, #1f5839);
+  transform: scale(1.05);
+}
+
+/* Contact Information Box */
+.contact-info {
+  width: 100%;
+  text-align: left;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Modern Shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Slight hover effect */
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+}
+
+.contact-info strong {
+  color: #2e8b57;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-container {
+    width: 90%;
+  }
+}
