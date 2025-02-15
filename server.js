@@ -37,5 +37,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000; // Render will automatically assign a port
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 5000; // Use the port assigned by Render
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(`Server running on port ${PORT}`)
+);
