@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json()); // Allow JSON requests
 app.use(cors()); // Allow frontend requests
 
+// ✅ Correct POST route for sending emails
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
