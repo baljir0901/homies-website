@@ -53,7 +53,11 @@ const Careers = () => {
 
         {/* Right Section: Image */}
         <div className="careers-image">
-          <img src="/assets/careers.jpg" alt="Join Us at HOMIES" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/careers.jpg`}
+            alt="Join Us at HOMIES"
+            className="careers-img"
+          />
         </div>
       </div>
     </section>

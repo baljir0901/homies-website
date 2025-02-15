@@ -19,8 +19,14 @@ const Header = () => {
     <header className={`header ${scrolling ? "scrolled" : ""}`}>
       {/* Left: Logo */}
       <div className="header-left">
-        <a href="/" className="logo">
-          <img src="/assets/logo2.png" alt="HOMIES Logo" />
+        <a href="#home" className="logo">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/logo2.png`}
+            alt="HOMIES Logo"
+            width="50"
+            height="50"
+            loading="lazy"
+          />
         </a>
       </div>
 

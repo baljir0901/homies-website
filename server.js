@@ -12,9 +12,8 @@ app.use(cors()); // Allow frontend requests
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Configure SMTP Transport
   const transporter = nodemailer.createTransport({
-    service: "gmail", // Or use another SMTP provider
+    service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
