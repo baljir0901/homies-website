@@ -13,10 +13,27 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("お問い合わせを送信しました。ありがとうございます！");
-    setFormData({ name: "", email: "", message: "" });
+
+    const response = await fetch(
+      "https://homies-backend.onrender.com/send-email",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert("お問い合わせを送信しました。ありがとうございます！");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("送信に失敗しました。もう一度お試しください。");
+      console.error(result);
+    }
   };
 
   return (
