@@ -29,7 +29,11 @@ const Philosophy = () => {
           <div className="content message">
             <h2>代表者挨拶</h2>
             <div className="ceo-profile">
-              <img src="/ceo.jpg" alt="CEO" className="ceo-image" />
+              <img
+                src={`${process.env.PUBLIC_URL}/ceo.jpg`}
+                alt="CEO"
+                className="ceo-image"
+              />
 
               <div className="ceo-text">
                 <p>
