@@ -30,7 +30,7 @@ const Philosophy = () => {
             <h2>代表者挨拶</h2>
             <div className="ceo-profile">
               <img
-                src="/homies-website/assets/ceo.jpg"
+                src={`${process.env.PUBLIC_URL}/assets/ceo.jpg`}
                 alt="CEO"
                 className="ceo-image"
               />
