@@ -21,7 +21,7 @@ const Header = () => {
       <div className="header-left">
         <a href="#home" className="logo">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/logo2.png`}
+            src={`${process.env.PUBLIC_URL}/assets/logo.png`}
             alt="HOMIES Logo"
             width="50"
             height="50"
