@@ -1,76 +1,65 @@
-import React, { useState } from "react";
-import "./Contact.css"; // Import CSS file
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // Import icons
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import "./Contact.css";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const form = useRef(); // ✅ Added useRef
+  const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    const response = await fetch(
-      "https://homies-backend.onrender.com/send-email",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      }
-    );
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert("お問い合わせを送信しました。ありがとうございます！");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("送信に失敗しました。もう一度お試しください。");
-      console.error(result);
-    }
+    emailjs
+      .sendForm(
+        "homies-website", // ✅ Your Service ID
+        "template_c718le1", // ✅ Your Template ID
+        form.current, // ✅ Correctly referencing the form
+        "iUH1GfbdM86bMgz1F" // ✅ Your Public Key
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setStatus("お問い合わせを送信しました。ありがとうございます！");
+          form.current.reset(); // ✅ Clear form after success
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setStatus("送信に失敗しました。もう一度お試しください。");
+        }
+      );
   };
 
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
         {/* Left - Contact Form */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={form} className="contact-form" onSubmit={sendEmail}>
           <h2 className="contact-title">お問い合わせ</h2>
           <p className="contact-description">
             ご質問やご相談がございましたら、以下のフォームよりお気軽にお問い合わせください。
           </p>
           <input
             type="text"
-            name="name"
+            name="from_name" // ✅ Match EmailJS template (from_name)
             placeholder="お名前"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
           <input
             type="email"
-            name="email"
+            name="from_email" // ✅ Match EmailJS template (from_email)
             placeholder="メールアドレス"
-            value={formData.email}
-            onChange={handleChange}
             required
           />
           <textarea
-            name="message"
+            name="message" // ✅ Match EmailJS template (message)
             placeholder="メッセージ"
-            value={formData.message}
-            onChange={handleChange}
             required
           ></textarea>
           <button type="submit" className="submit-button">
             送信する
           </button>
+          <p>{status}</p>
         </form>
 
         {/* Right - Contact Info */}
