@@ -11,6 +11,7 @@ import Careers from "./components/8.Careers/Careers";
 import Contact from "./components/9.Contact/Contact";
 import Footer from "./components/10.Footer/Footer";
 import PhilosophyPage from "./pages/PhilosophyPage"; // Import Philosophy Page
+import RecruitmentPage from "./pages/RecruitmentPage"; // Import the new page
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
           }
         />
         <Route path="/philosophy" element={<PhilosophyPage />} />
+        <Route path="/recruitment" element={<RecruitmentPage />} />{" "}
+        {/* New Route */}
       </Routes>
       <Footer />
     </div>

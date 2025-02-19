@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
 import "./Careers.css";
 import {
   FaMapMarkerAlt,
@@ -9,6 +10,8 @@ import {
 } from "react-icons/fa";
 
 const Careers = () => {
+  const navigate = useNavigate(); // ✅ Initialize useNavigate
+
   return (
     <section id="careers" className="careers">
       <div className="careers-container">
@@ -46,9 +49,13 @@ const Careers = () => {
             </p>
           </div>
 
-          <a href="#contact" className="apply-button">
+          {/* ✅ Change Button to Navigate to Recruitment Page */}
+          <button
+            onClick={() => navigate("/recruitment")}
+            className="apply-button"
+          >
             応募する
-          </a>
+          </button>
         </div>
 
         {/* Right Section: Image */}
