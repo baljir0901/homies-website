@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/homies-website/static/css/main.f46a0b74.css",
-    "main.js": "/homies-website/static/js/main.f36352e8.js",
+    "main.css": "/homies-website/static/css/main.3694852a.css",
+    "main.js": "/homies-website/static/js/main.084c570d.js",
     "static/js/488.f3efb8ca.chunk.js": "/homies-website/static/js/488.f3efb8ca.chunk.js",
     "index.html": "/homies-website/index.html",
-    "main.f46a0b74.css.map": "/homies-website/static/css/main.f46a0b74.css.map",
-    "main.f36352e8.js.map": "/homies-website/static/js/main.f36352e8.js.map",
+    "main.3694852a.css.map": "/homies-website/static/css/main.3694852a.css.map",
+    "main.084c570d.js.map": "/homies-website/static/js/main.084c570d.js.map",
     "488.f3efb8ca.chunk.js.map": "/homies-website/static/js/488.f3efb8ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f46a0b74.css",
-    "static/js/main.f36352e8.js"
+    "static/css/main.3694852a.css",
+    "static/js/main.084c570d.js"
   ]
 }
