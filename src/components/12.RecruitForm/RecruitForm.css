@@ -1,63 +1,78 @@
 /* === RecruitForm.css === */
 
 /* General Form Styling */
-.recruit-form-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
+.recruit-form {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   font-family: "Noto Sans JP", sans-serif;
 }
 
 /* Form Title */
-.recruit-form-title {
-  font-size: 24px;
+.recruit-form h2 {
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   color: #227a3a;
 }
 
-/* Form Labels */
-.recruit-form-container label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+.recruit-form p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
 }
 
-/* Form Inputs */
-.recruit-form-container input,
-.recruit-form-container textarea,
-.recruit-form-container select {
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Labels */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+}
+
+/* Inputs, Selects, and Textareas */
+input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-/* Checkbox & Radio Buttons */
-.recruit-form-container .checkbox-group {
+/* Align Checkboxes in a Row */
+.checkbox-group {
   display: flex;
+  justify-content: start;
+  gap: 15px;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.recruit-form-container .checkbox-group label {
+.checkbox-group label {
+  font-size: 14px;
   font-weight: normal;
 }
 
 /* Submit Button */
-.recruit-form-container .submit-button {
+button {
   width: 100%;
   background: #227a3a;
   color: white;
   padding: 12px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
@@ -65,19 +80,19 @@
   transition: 0.3s;
 }
 
-.recruit-form-container .submit-button:hover {
+button:hover {
   background: #1b5e2f;
 }
 
-/* Responsive */
+/* Responsive Fixes */
 @media (max-width: 600px) {
-  .recruit-form-container {
+  .recruit-form {
     width: 90%;
   }
 
-  .recruit-form-container input,
-  .recruit-form-container textarea,
-  .recruit-form-container select {
+  input,
+  textarea,
+  select {
     font-size: 14px;
   }
 }

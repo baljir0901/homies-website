@@ -65,8 +65,8 @@ const RecruitForm = () => {
     // Send the form data via EmailJS
     emailjs
       .send(
-        "homies-website", // ✅ Your Service ID
-        "template_c718le1", // ✅ Your Template ID
+        "homies-recruit", // ✅ Your Service ID
+        "template_vv4hawc", // ✅ Your Template ID
         formData,
         "iUH1GfbdM86bMgz1F" // ✅ Your Public Key
       )
