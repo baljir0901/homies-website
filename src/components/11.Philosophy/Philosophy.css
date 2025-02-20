@@ -27,6 +27,7 @@
   border: none;
   outline: none;
   transition: all 0.3s ease;
+  color: #333;
 }
 
 .tab.active {
@@ -82,6 +83,9 @@ ul {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  width: auto !important; /* Allow width to adjust based on content */
+  min-width: 120px; /* Set a minimum width */
+  max-width: 180px; /* Limit maximum width */
 }
 
 .back-button:hover {

@@ -72,9 +72,12 @@
 .ceo-link {
   display: inline-block; /* Makes the link behave like a button */
   margin-top: 10px; /* Adds space above the link */
-  font-size: 1.1rem; /* Slightly larger font */
   color: #246b45; /* Green color */
   text-decoration: none; /* Removes underline */
+  padding: 2px 5px !important; /* Reduce padding to make button smaller */
+  font-size: 0.9rem !important; /* Slightly smaller text */
+  width: auto !important; /* Adjust width automatically */
+  min-width: 150px; /* Set a minimum width */
 }
 
 /* Container for Company Links */
@@ -83,6 +86,9 @@
   display: flex; /* Enables flexbox */
   flex-direction: column; /* Stacks links vertically */
   gap: 15px; /* Space between links */
+  padding: 2px 5px !important; /* Reduce padding */
+  width: auto !important; /* Adjust width based on content */
+  min-width: 180px; /* Set a minimum width */
 }
 
 /* Individual Company Link */
@@ -90,7 +96,12 @@
   display: flex; /* Aligns image and text horizontally */
   align-items: center; /* Centers items vertically */
   text-decoration: none; /* Removes underline */
-  color: black; /* Default text color */
+  width: auto !important; /* Allow width to adjust based on content */
+  min-width: 200px; /* Set a smaller minimum width */
+  max-width: 340px; /* Limit maximum width */
+  padding: 6px 12px !important; /* Adjust padding */
+
+  color: white; /* Default text color */
   cursor: pointer; /* Changes cursor to pointer on hover */
 }
 
@@ -114,6 +125,7 @@
   font-size: 1.1rem; /* Increases text size */
   transition: background 0.3s ease; /* Smooth transition effect */
   cursor: pointer; /* Shows pointer on hover */
+  width: auto !important; /* Adjust width based on content */
 }
 
 /* Button Hover Effect */
@@ -135,4 +147,8 @@
   .company-link {
     justify-content: center; /* Centers links */
   }
+}
+/* More Button ("もっと見る →") Text Color */
+.mottomiru {
+  color: white !important; /* Ensures "もっと見る →" is white */
 }

@@ -45,7 +45,7 @@ const CEOMessage = () => {
               onClick={() => navigate("/philosophy")}
               className="ceo-link"
             >
-              もっと見る →
+              <p className="mottomiru">もっと見る →</p>
             </button>
           </p>
 
