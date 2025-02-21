@@ -22,7 +22,10 @@ const PhilosophyPage = () => {
       {/* <Header /> */}
       <div className="content-wrapper">
         <Philosophy />
-        <button className="back-button" onClick={() => navigate("/")}>
+        <button
+          className="back-button"
+          onClick={() => navigate("/ceo-message")}
+        >
           ホームへ戻る
         </button>
       </div>
