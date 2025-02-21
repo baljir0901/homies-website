@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter
-      basename={process.env.NODE_ENV === "production" ? "/" : "/homies-website"}
+      basename={
+        process.env.NODE_ENV === "development" ? "/" : "/homies-website"
+      }
     >
       {" "}
       {/* ✅ Wrap App with BrowserRouter */}

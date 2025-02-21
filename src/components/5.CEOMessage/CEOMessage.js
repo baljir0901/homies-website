@@ -45,7 +45,7 @@ const CEOMessage = () => {
           </p>
 
           {/* Company Info Links */}
-          <div className="company-links">
+          {/* <div className="company-links">
             <button
               onClick={() => navigate("/philosophy#philosophy")}
               className="company-link"
@@ -71,7 +71,7 @@ const CEOMessage = () => {
               />
               <span>代表者挨拶→</span>
             </button>
-          </div>
+          </div> */}
 
           {/* Contact Button */}
           <button onClick={() => navigate("/contact")} className="ceo-button">
