@@ -24,7 +24,7 @@ const PhilosophyPage = () => {
         <Philosophy />
         <button
           className="back-button"
-          onClick={() => navigate("/ceo-message")}
+          onClick={() => navigate("/#ceo-message")}
         >
           ホームへ戻る
         </button>
