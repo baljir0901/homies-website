@@ -8,7 +8,9 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/homies-website">
+    <BrowserRouter
+      basename={process.env.NODE_ENV === "production" ? "/" : "/homies-website"}
+    >
       {" "}
       {/* ✅ Wrap App with BrowserRouter */}
       <App />
