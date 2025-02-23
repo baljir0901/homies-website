@@ -85,8 +85,6 @@ const RecruitForm = () => {
 
   return (
     <section className="recruit-form">
-      <h2>人材募集シート登録</h2>
-      <p>以下のフォームに入力し、送信してください。</p>
       <form onSubmit={handleSubmit}>
         <label>
           会社名 (Company Name) <span>*</span>
