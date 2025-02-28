@@ -1,21 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ja">
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- ✅ Add AjaxZip3 for postal code autofill -->
-    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <meta name="robots" content="index, follow" />
 
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <!-- ✅ Title and Meta Description for SEO -->
+    <title>株式会社 HOMIES (カブシキガイシャ ホーミーズ) - 千葉県千葉市の建設会社</title>
+    <meta name="description" content="株式会社 HOMIES (カブシキガイシャ ホーミーズ) は、千葉県千葉市中央区に拠点を置く建設会社です。建築工事全般や人材紹介サービスを提供し、安全で高品質なものづくりにこだわります。" />
+    <meta name="keywords" content="株式会社HOMIES, HOMIES, カブシキガイシャ ホーミーズ, 株式会社 HOMIES, 建設会社, 千葉県, 建築工事, 人材紹介, 施工実績, 採用情報, 建設業, 日本の建設, 事業所番号 1201-630172-2, 求人番号 12010-04424251, 法人番号 1040001096355" />
+
+    <!-- ✅ Open Graph (OG) Tags for Social Media -->
+    <meta property="og:title" content="株式会社 HOMIES (カブシキガイシャ ホーミーズ) - 千葉県千葉市の建設会社" />
+    <meta property="og:description" content="建築工事全般や人材紹介サービスを提供し、安全で高品質なものづくりにこだわる建設会社です。" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:url" content="https://homies-p.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="株式会社 HOMIES (カブシキガイシャ ホーミーズ) - 千葉県千葉市の建設会社" />
+    <meta name="twitter:description" content="建築工事全般や人材紹介サービスを提供し、安全で高品質なものづくりにこだわる建設会社です。" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://homies-p.com" />
+
+    <!-- ✅ Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- ✅ Web App Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- ✅ Structured Data (Schema.org JSON-LD) for Google Search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "株式会社 HOMIES (カブシキガイシャ ホーミーズ)",
+        "url": "https://homies-p.com",
+        "logo": "%PUBLIC_URL%/logo192.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+81-43-445-8420",
+            "contactType": "カスタマーサービス",
+            "areaServed": "JP",
+            "availableLanguage": "ja"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "中央3丁目13番7号 コスモ千葉中央ビル706号",
+            "addressLocality": "千葉市中央区",
+            "addressRegion": "千葉県",
+            "postalCode": "260-0013",
+            "addressCountry": "JP"
+        },
+        "foundingDate": "2016",
+        "description": "株式会社 HOMIES (カブシキガイシャ ホーミーズ) は、千葉県千葉市中央区に拠点を置く建設会社で、建築工事全般や人材紹介サービスを提供しています。",
+        "email": "puru@amara-k.com",
+        "telephone": "+81-43-445-8420",
+        "identifier": [
+            {
+                "@type": "PropertyValue",
+                "name": "事業所番号",
+                "value": "1201-630172-2"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "求人番号",
+                "value": "12010-04424251"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "法人番号",
+                "value": "1040001096355"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ✅ AjaxZip3 for Postal Code Autofill -->
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+<body>
+    <noscript>このウェブサイトを利用するには、JavaScriptを有効にする必要があります。</noscript>
     <div id="root"></div>
-  </body>
+</body>
 </html>
