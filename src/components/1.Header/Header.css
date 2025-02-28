@@ -4,8 +4,9 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 10px 20px; /* Adjusted padding for better fit on mobile */
+  padding: 10px 20px;
   background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   transition: background 0.3s ease-in-out;
   z-index: 1000;
   display: flex;
@@ -25,8 +26,25 @@
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove any default padding */
+  margin: 0; /* Remove any default margin */
+}
+
 .logo img {
-  height: 50px;
+  height: 75px; /* Increased from 50px to 70px */
+  max-width: 100%; /* Ensures it scales properly */
+  transition: height 0.3s ease-in-out; /* Smooth transition */
+  padding: 0;
+  margin: 0;
+}
+
+/* Reduce logo size slightly when scrolled */
+.header.scrolled .logo img {
+  height: 60px; /* Slightly smaller when scrolled */
 }
 
 /* Centered Navigation Menu */
@@ -73,7 +91,8 @@
   min-width: 200px;
 }
 
-.nav-item:hover .dropdown-menu {
+.nav-item:hover .dropdown-menu,
+.nav-links.open .dropdown-menu {
   display: block;
 }
 
@@ -82,17 +101,19 @@
   display: none;
   font-size: 30px;
   cursor: pointer;
+  position: absolute;
+  right: 20px; /* Ensuring it stays aligned */
+  top: 15px;
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
   .header {
-    padding: 10px 10px; /* Further adjusted padding for mobile */
+    padding: 10px;
   }
 
   .menu-toggle {
     display: block;
-    margin-right: 30px; /* Adjusted margin to fit within the screen */
   }
 
   .nav-links {
@@ -109,6 +130,17 @@
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links.open .nav-item {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .header-right {

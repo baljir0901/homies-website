@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
-import RecruitForm from "../components/12.RecruitForm/RecruitForm";
+import RecruitForm from "../components/12.RecruitForm/RecruitFormTemp";
 import "./RecuitmentPage.css"; // Ensure CSS is imported
 
 const RecruitmentPage = () => {
   const navigate = useNavigate();
+
+  // ✅ Scroll to top when the page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

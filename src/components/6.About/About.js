@@ -20,7 +20,13 @@ const About = () => {
               千葉県千葉市中央区中央3-13-7 コスモ千葉中央ビル706号
             </p>
             <p>
-              <strong>📞 電話番号:</strong> 043-445-8420
+              <strong>☎️ 固定電話番号:</strong> 043-306-6985
+            </p>
+            <p>
+              <strong>📱 携帯電話番号:</strong> 070-3154-2692
+            </p>
+            <p>
+              <strong>📠Fax:</strong> 043-306-6986
             </p>
             <p>
               <strong>✉ メール:</strong> puru@amara-k.com

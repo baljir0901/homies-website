@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css"; // Import the CSS file
-import { FaPhone, FaEnvelope } from "react-icons/fa"; // Import icons
+import { FaPhone, FaEnvelope, FaFax, FaPhoneSquareAlt } from "react-icons/fa"; // Import icons
 
 const Footer = () => {
   return (
@@ -30,7 +30,13 @@ const Footer = () => {
         <div className="footer-contact">
           <p>〒260-0013 千葉県千葉市中央区中央3-13-7</p>
           <p>
-            <FaPhone /> 043-445-8420
+            <FaPhoneSquareAlt /> 043-306-6985
+          </p>
+          <p>
+            <FaPhone /> 070-3154-2692
+          </p>
+          <p>
+            <FaFax /> 043-306-6986
           </p>
           <p>
             <FaEnvelope /> puru@amara-k.com

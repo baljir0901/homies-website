@@ -3,6 +3,13 @@ import "./Projects.css"; // Import the CSS file
 
 const projectData = [
   {
+    id: "project3",
+    title: "機械メンテナンスのプロ",
+    image: `${process.env.PUBLIC_URL}/assets/hero3.jpg`,
+    description: "設備の安定稼働を支える確かな技術",
+    details: "産業機器のメンテナンス（関東地域 施工事例）",
+  },
+  {
     id: "project1",
     title: "精密な鍛冶工技術",
     image: `${process.env.PUBLIC_URL}/assets/hero1.jpg`, // ✅ Fixed
@@ -15,13 +22,6 @@ const projectData = [
     image: `${process.env.PUBLIC_URL}/assets/hero2.jpg`,
     description: "強度と安全性を確保する精密溶接",
     details: "建築鉄骨の溶接作業（東京都 施工事例）",
-  },
-  {
-    id: "project3",
-    title: "機械メンテナンスのプロ",
-    image: `${process.env.PUBLIC_URL}/assets/hero3.jpg`,
-    description: "設備の安定稼働を支える確かな技術",
-    details: "産業機器のメンテナンス（関東地域 施工事例）",
   },
 ];
 

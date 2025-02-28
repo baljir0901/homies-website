@@ -23,8 +23,6 @@ const Header = () => {
           <img
             src={`${process.env.PUBLIC_URL}/assets/logo.png`}
             alt="HOMIES Logo"
-            width="50"
-            height="50"
             loading="lazy"
           />
         </a>

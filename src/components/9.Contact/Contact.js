@@ -1,7 +1,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFax,
+  FaPhoneSquareAlt,
+} from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef(); // ✅ Added useRef
@@ -70,7 +76,13 @@ const Contact = () => {
             千葉県千葉市中央区中央3-13-7
           </p>
           <p>
-            <FaPhoneAlt /> <strong>電話:</strong> 043-445-8420
+            <FaPhoneSquareAlt /> <strong> 固定電話番号:</strong> 043-306-6985
+          </p>
+          <p>
+            <FaPhoneAlt /> <strong> 携帯電話:</strong> 070-3154-2692
+          </p>
+          <p>
+            <FaFax /> <strong>Fax:</strong> 043-306-6986
           </p>
           <p>
             <FaEnvelope /> <strong>メール:</strong> puru@amara-k.com
