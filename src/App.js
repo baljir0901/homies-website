@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"; // ✅ Only import Routes and Route
+import { HelmetProvider, Helmet } from "react-helmet-async"; // ✅ Import Helmet
 import Header from "./components/1.Header/Header";
 import Hero from "./components/2.Hero/Hero";
 import News from "./components/3.News/News";
@@ -15,32 +16,41 @@ import RecruitmentPage from "./pages/RecruitmentPage"; // Import the new page
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <main>
-                <Hero />
-                <News />
-                <Projects />
-                <CEOMessage />
-                <About />
-                <Services />
-                <Careers />
-                <Contact />
-              </main>
-            </>
-          }
-        />
-        <Route path="/philosophy" element={<PhilosophyPage />} />
-        <Route path="/recruitment" element={<RecruitmentPage />} />{" "}
-        {/* New Route */}
-      </Routes>
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Helmet>
+                  <title>株式会社HOMIES - 安心・高品質・誠実なものづくり</title>
+                  <meta
+                    name="description"
+                    content="株式会社HOMIESは、革新的な建設技術を活用し、高品質な建設サービスを提供する会社です。"
+                  />
+                </Helmet>
+                <main>
+                  <Hero />
+                  <News />
+                  <Projects />
+                  <CEOMessage />
+                  <About />
+                  <Services />
+                  <Careers />
+                  <Contact />
+                </main>
+              </>
+            }
+          />
+          <Route path="/philosophy" element={<PhilosophyPage />} />
+          <Route path="/recruitment" element={<RecruitmentPage />} />{" "}
+          {/* New Route */}
+        </Routes>
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 }
 
